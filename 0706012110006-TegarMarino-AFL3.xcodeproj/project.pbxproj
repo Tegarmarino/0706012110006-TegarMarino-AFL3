@@ -18,6 +18,7 @@
 		9B0AFF6729E8F4480029D385 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0AFF6629E8F4480029D385 /* BadgeBackground.swift */; };
 		9B0AFF6929E8F7670029D385 /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0AFF6829E8F7670029D385 /* BadgeSymbol.swift */; };
 		9B0AFF6B29E8F7E00029D385 /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0AFF6A29E8F7E00029D385 /* RotatedBadgeSymbol.swift */; };
+		9B0AFF6D29E8F80C0029D385 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0AFF6C29E8F80C0029D385 /* Badge.swift */; };
 		9B0F6B4A29E4ED1000994854 /* _706012110006_TegarMarino_AFL3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F6B4929E4ED1000994854 /* _706012110006_TegarMarino_AFL3App.swift */; };
 		9B0F6B4C29E4ED1000994854 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F6B4B29E4ED1000994854 /* ContentView.swift */; };
 		9B0F6B4E29E4ED1200994854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0F6B4D29E4ED1200994854 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		9B0AFF6629E8F4480029D385 /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		9B0AFF6829E8F7670029D385 /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		9B0AFF6A29E8F7E00029D385 /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
+		9B0AFF6C29E8F80C0029D385 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		9B0F6B4629E4ED1000994854 /* 0706012110006-TegarMarino-AFL3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0706012110006-TegarMarino-AFL3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0F6B4929E4ED1000994854 /* _706012110006_TegarMarino_AFL3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _706012110006_TegarMarino_AFL3App.swift; sourceTree = "<group>"; };
 		9B0F6B4B29E4ED1000994854 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,18 @@
 			path = Landmarks;
 			sourceTree = "<group>";
 		};
+		9B0AFF6E29E8F8910029D385 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				9B0AFF6C29E8F80C0029D385 /* Badge.swift */,
+				9B0AFF6629E8F4480029D385 /* BadgeBackground.swift */,
+				9B0AFF6829E8F7670029D385 /* BadgeSymbol.swift */,
+				9B0AFF6429E8F3720029D385 /* HexagonParameters.swift */,
+				9B0AFF6A29E8F7E00029D385 /* RotatedBadgeSymbol.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 		9B0F6B3D29E4ED1000994854 = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0F6B4929E4ED1000994854 /* _706012110006_TegarMarino_AFL3App.swift */,
-				9B0AFF6829E8F7670029D385 /* BadgeSymbol.swift */,
-				9B0AFF6A29E8F7E00029D385 /* RotatedBadgeSymbol.swift */,
-				9B0AFF6429E8F3720029D385 /* HexagonParameters.swift */,
-				9B0AFF6629E8F4480029D385 /* BadgeBackground.swift */,
+				9B0AFF6E29E8F8910029D385 /* Badge */,
 				9B0AFF5929E8E4AC0029D385 /* Resources */,
 				9B0AFF5829E8E4490029D385 /* Model */,
 				9B0AFF5729E8E4320029D385 /* Views */,
@@ -218,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B0F6B4C29E4ED1000994854 /* ContentView.swift in Sources */,
+				9B0AFF6D29E8F80C0029D385 /* Badge.swift in Sources */,
 				9B0F6B5A29E4F76A00994854 /* MapView.swift in Sources */,
 				9B0F6B4A29E4ED1000994854 /* _706012110006_TegarMarino_AFL3App.swift in Sources */,
 				9B0AFF6129E8F1D90029D385 /* FavoriteButton.swift in Sources */,
