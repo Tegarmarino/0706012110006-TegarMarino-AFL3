@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Hashable, Codable {
+// Identifiable digunakan agar saat panggil Landmark di file lanmark view tidak perlu menggunakan parameter ID
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String
