@@ -27,7 +27,7 @@ struct ProfileHost: View {
 //                Tambahkan kondisi yang menampilkan profil statis atau tampilan untuk mode Edit.
                 ProfileSummary(profile: modelData.profile)
             } else {
-                Text("Profile Editor")
+                ProfileEditor(profile: $draftProfile)
             }
         }
         .padding()
