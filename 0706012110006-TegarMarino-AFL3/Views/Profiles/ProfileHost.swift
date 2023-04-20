@@ -18,6 +18,15 @@ struct ProfileHost: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
+                
+//                Menambahkan button untuk cancel edit
+                if editMode?.wrappedValue == .active {
+                    Button("Cancel", role: .cancel) {
+                        draftProfile = modelData.profile
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
+                
                 Spacer()
                 EditButton()
             }
@@ -27,7 +36,15 @@ struct ProfileHost: View {
 //                Tambahkan kondisi yang menampilkan profil statis atau tampilan untuk mode Edit.
                 ProfileSummary(profile: modelData.profile)
             } else {
+                
+//                tambahkan onApper dan onDisappear untuk mengisi editor dengan data profil yang benar dan memperbarui profil persisten saat pengguna mengetuk tombol Selesai.
                 ProfileEditor(profile: $draftProfile)
+                    .onAppear {
+                        draftProfile = modelData.profile
+                    }
+                    .onDisappear {
+                        modelData.profile = draftProfile
+                }
             }
         }
         .padding()
