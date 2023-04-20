@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoryView: View {
+struct CategoryHome: View {
 //    Membuat environment object untuk model data, agar bisa mengakses kunci Category dari model data
     @EnvironmentObject var modelData: ModelData
     
@@ -37,7 +37,7 @@ struct CategoryView: View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView()
+        CategoryHome()
             .environmentObject(ModelData())
     }
 }
