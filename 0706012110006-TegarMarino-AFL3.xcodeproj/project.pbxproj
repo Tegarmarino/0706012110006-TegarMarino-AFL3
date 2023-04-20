@@ -42,6 +42,7 @@
 		9B602AE929F166210094F2EF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AE829F166210094F2EF /* PageViewController.swift */; };
 		9B602AEB29F167930094F2EF /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AEA29F167930094F2EF /* FeatureCard.swift */; };
 		9B602AED29F1682D0094F2EF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AEC29F1682D0094F2EF /* PageView.swift */; };
+		9B602AEF29F16BE00094F2EF /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AEE29F16BE00094F2EF /* PageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		9B602AE829F166210094F2EF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9B602AEA29F167930094F2EF /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		9B602AEC29F1682D0094F2EF /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		9B602AEE29F16BE00094F2EF /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				9B602AEA29F167930094F2EF /* FeatureCard.swift */,
 				9B602AE829F166210094F2EF /* PageViewController.swift */,
 				9B602AEC29F1682D0094F2EF /* PageView.swift */,
+				9B602AEE29F16BE00094F2EF /* PageControl.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				9B0AFF7A29E8FB210029D385 /* GraphCapsule.swift in Sources */,
 				9B0F6B4A29E4ED1000994854 /* _706012110006_TegarMarino_AFL3App.swift in Sources */,
 				9B0AFF6129E8F1D90029D385 /* FavoriteButton.swift in Sources */,
+				9B602AEF29F16BE00094F2EF /* PageControl.swift in Sources */,
 				9B0AFF7C29E8FB210029D385 /* HikeDetail.swift in Sources */,
 				9B602ADB29F118A40094F2EF /* CategoryItem.swift in Sources */,
 				9B602AD729F114720094F2EF /* CategoryHome.swift in Sources */,

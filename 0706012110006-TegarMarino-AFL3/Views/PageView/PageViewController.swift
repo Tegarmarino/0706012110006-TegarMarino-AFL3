@@ -10,6 +10,7 @@ import UIKit
 
 struct PageViewController<Page: View>: UIViewControllerRepresentable {
     var pages: [Page]
+    @Binding var currentPage: Int
     
 //    Menambahkan func ke PageViewController untuk membuat koordinator.
     func makeCoordinator() -> Coordinator {
@@ -22,6 +23,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
             transitionStyle: .scroll,
             navigationOrientation: .horizontal)
         pageViewController.dataSource = context.coordinator
+        pageViewController.delegate = context.coordinator
 
         return pageViewController
     }
@@ -29,12 +31,12 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
 //    Menambahkan metode updateUIViewController(_:context:) yang memanggil setViewControllers(_:direction:animated:) untuk menyediakan pengontrol tampilan untuk ditampilkan.
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
         pageViewController.setViewControllers(
-            [context.coordinator.controllers[0]], direction: .forward, animated: true)
+            [context.coordinator.controllers[currentPage]], direction: .forward, animated: true)
     }
     
 //    Membuat nested class Coordinator di dalam PageViewController.
 //    Menambahkan kesesuaian UIPageViewControllerDataSource ke tipe Coordinator, dan implementasikan dua func pageViewController.
-    class Coordinator: NSObject, UIPageViewControllerDataSource {
+    class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 //        Inisialisasi array controller di koordinator menggunakan array page of view.
         var parent: PageViewController
         var controllers = [UIViewController]()
@@ -68,6 +70,18 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
                 return controllers.first
             }
             return controllers[index + 1]
+        }
+        
+        func pageViewController(
+            _ pageViewController: UIPageViewController,
+            didFinishAnimating finished: Bool,
+            previousViewControllers: [UIViewController],
+            transitionCompleted completed: Bool) {
+            if completed,
+                let visibleViewController = pageViewController.viewControllers?.first,
+                let index = controllers.firstIndex(of: visibleViewController) {
+                parent.currentPage = index
+            }
         }
     }
 }

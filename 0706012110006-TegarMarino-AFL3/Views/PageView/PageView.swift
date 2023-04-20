@@ -11,8 +11,17 @@ import SwiftUI
 struct PageView<Page: View>: View {
     var pages: [Page]
     
+//    Mendeklarasikan variabel @State di PageView, dan meneruskan Binding ke properti saat membuat child class PageViewController.
+    @State private var currentPage = 1
+    
     var body: some View {
-        PageViewController(pages: pages)
+        ZStack(alignment: .bottomTrailing) {
+            PageViewController(pages: pages, currentPage: $currentPage)
+            PageControl(numberOfPages: pages.count, currentPage: $currentPage)
+                .frame(width: CGFloat(pages.count * 18))
+                .padding(.trailing)
+
+        }
     }
 }
 
