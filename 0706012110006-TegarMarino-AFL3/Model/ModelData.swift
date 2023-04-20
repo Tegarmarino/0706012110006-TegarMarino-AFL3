@@ -12,6 +12,11 @@ final class ModelData: ObservableObject {
     @Published var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
     
+//    Mensetting agar isFeatured true
+    var features: [Landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+    
 //    Menambahkan kunci untuk Category
     var categories: [String: [Landmark]] {
         Dictionary(

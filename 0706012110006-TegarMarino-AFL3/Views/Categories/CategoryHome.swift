@@ -14,11 +14,20 @@ struct CategoryView: View {
     var body: some View {
         NavigationView{
             List {
+                modelData.features[0].image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+                    .clipped()
+                    .listRowInsets(EdgeInsets())
+
 //                Memanggil kuncit category yang ada di dalam model data dengan menggunakan ForEach yang di embed dengan list agar tampilannya bisa menjadi list
                 
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
-                    Text(key)
+//                    Memanggil category row untuk ditambahkan kedalam category home
+                    CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
+                .listRowInsets(EdgeInsets())
             }
 //            Set title untuk navigation bar
             .navigationTitle("Featured")
