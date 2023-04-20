@@ -39,6 +39,9 @@
 		9B602AE229F11C9C0094F2EF /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AE129F11C9C0094F2EF /* ProfileSummary.swift */; };
 		9B602AE429F11D610094F2EF /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AE329F11D610094F2EF /* HikeBadge.swift */; };
 		9B602AE629F120DA0094F2EF /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AE529F120DA0094F2EF /* ProfileEditor.swift */; };
+		9B602AE929F166210094F2EF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AE829F166210094F2EF /* PageViewController.swift */; };
+		9B602AEB29F167930094F2EF /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AEA29F167930094F2EF /* FeatureCard.swift */; };
+		9B602AED29F1682D0094F2EF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B602AEC29F1682D0094F2EF /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		9B602AE129F11C9C0094F2EF /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		9B602AE329F11D610094F2EF /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
 		9B602AE529F120DA0094F2EF /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		9B602AE829F166210094F2EF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		9B602AEA29F167930094F2EF /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
+		9B602AEC29F1682D0094F2EF /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		9B0AFF5729E8E4320029D385 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9B602AE729F166050094F2EF /* PageView */,
 				9B602ADE29F11C300094F2EF /* Profiles */,
 				9B602AD529F114500094F2EF /* Categories */,
 				9B0F6B4B29E4ED1000994854 /* ContentView.swift */,
@@ -223,6 +230,16 @@
 			path = Profiles;
 			sourceTree = "<group>";
 		};
+		9B602AE729F166050094F2EF /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				9B602AEA29F167930094F2EF /* FeatureCard.swift */,
+				9B602AE829F166210094F2EF /* PageViewController.swift */,
+				9B602AEC29F1682D0094F2EF /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B602AD929F116FD0094F2EF /* CategoryRow.swift in Sources */,
+				9B602AEB29F167930094F2EF /* FeatureCard.swift in Sources */,
 				9B602ADD29F11BE90094F2EF /* Profile.swift in Sources */,
 				9B0F6B4C29E4ED1000994854 /* ContentView.swift in Sources */,
 				9B0AFF7B29E8FB210029D385 /* HikeGraph.swift in Sources */,
@@ -312,11 +330,13 @@
 				9B602AE029F11C490094F2EF /* ProfileHost.swift in Sources */,
 				9B0AFF7229E8FAA00029D385 /* Hike.swift in Sources */,
 				9B0AFF6B29E8F7E00029D385 /* RotatedBadgeSymbol.swift in Sources */,
+				9B602AED29F1682D0094F2EF /* PageView.swift in Sources */,
 				9B0AFF6929E8F7670029D385 /* BadgeSymbol.swift in Sources */,
 				9B602AE629F120DA0094F2EF /* ProfileEditor.swift in Sources */,
 				9B0AFF5D29E8E7D60029D385 /* LandmarkList.swift in Sources */,
 				9B0AFF7D29E8FB210029D385 /* HikeView.swift in Sources */,
 				9B0AFF5F29E8E9350029D385 /* LandmarkDetail.swift in Sources */,
+				9B602AE929F166210094F2EF /* PageViewController.swift in Sources */,
 				9B0AFF6729E8F4480029D385 /* BadgeBackground.swift in Sources */,
 				9B602AE429F11D610094F2EF /* HikeBadge.swift in Sources */,
 				9B0F6B5829E4F5E900994854 /* CircleImage.swift in Sources */,
