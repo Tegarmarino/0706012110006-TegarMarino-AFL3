@@ -11,6 +11,8 @@ import Combine
 final class ModelData: ObservableObject {
     @Published var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
+//    mengupdate modelData untuk menamhkan instance profil pengguna yang tetap ada bahkan setelah pengguna menutup tampilan profil.
+    @Published var profile = Profile.default
     
 //    Mensetting agar isFeatured true
     var features: [Landmark] {
