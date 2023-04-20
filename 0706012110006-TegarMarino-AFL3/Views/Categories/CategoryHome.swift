@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryHome: View {
 //    Membuat environment object untuk model data, agar bisa mengakses kunci Category dari model data
     @EnvironmentObject var modelData: ModelData
+    @State private var showingProfile = false
     
     var body: some View {
         NavigationView{
@@ -30,7 +31,21 @@ struct CategoryHome: View {
                 .listRowInsets(EdgeInsets())
             }
 //            Set title untuk navigation bar
+            .listStyle(.inset)
             .navigationTitle("Featured")
+            
+//            menambahkan tombol profil pengguna ke bilah navigasi menggunakan pengubah bilah alat, dan tampilkan tampilan ProfileHost saat pengguna mengetuknya.
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+            }
+            .sheet(isPresented: $showingProfile) {
+                ProfileHost()
+                    .environmentObject(modelData)
+            }
         }
     }
 }
